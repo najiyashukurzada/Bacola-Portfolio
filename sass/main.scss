@@ -1,0 +1,8 @@
+@import './base/reset','./base/typography';
+
+
+@import './utils/variables';
+
+@import './layout/navigation' , './layout/footer';
+
+@import './pages/home', './pages/shop'
