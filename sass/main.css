@@ -663,4 +663,25 @@ aside .container-covid strong {
   width: 880px;
   margin-left: 410px;
 }
+
+.footer-iconboxes {
+  margin: 50px;
+}
+
+.footer-iconboxes .iconbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 1px solid #e0dddd;
+}
+
+.footer-iconboxes .iconbox i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-iconboxes .iconbox span {
+  font-size: 14px;
+  opacity: 0.8;
+}
 /*# sourceMappingURL=main.css.map */
