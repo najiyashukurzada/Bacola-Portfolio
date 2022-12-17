@@ -2,7 +2,9 @@ body{
     font-family: 'Noto Color Emoji', sans-serif;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
+   
 }
+
 aside{
     width: 100%;
     position: relative;
@@ -203,7 +205,6 @@ aside{
                 margin-right: 35px;
                 border: 1px solid lightgrey; 
                 border-radius: 10px;
-                box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
                 #modal{
                     background-color: white;
                     width: 180px;
@@ -414,77 +415,7 @@ aside{
 }
 #carouselExampleSlidesOnly{
     .carousel-inner{
-        width: 840px;
+        width: 880px;
         margin-left: 410px;
     }
 }
-
-footer {
-    .subsciption-footer {
-      // position: relative;
-      height: 354px;
-      background-color: #233a95;
-      color: #fff;
-      .second-text {
-        color: rgb(187, 187, 187);
-      }
-      .text-subscription {
-        // position: absolute
-        top: 13%;
-      }
-      .email-box-footer {
-        width: 60%;
-        padding: 2px 2px;
-        border-radius: 5px;
-        background-color: #fff;
-        .envelope-email-footer {
-          margin-left: 20px;
-        }
-        i {
-          color: rgb(160, 160, 160);
-        }
-        input {
-          padding: 15px 5px;
-          border: none;
-          outline: none;
-          &:focus {
-            outline: none;
-            border: none;
-          }
-        }
-        .subscribe-button {
-          background-color: #233a95;
-          color: #fff;
-          padding: 5px 5px !important;
-          border-radius: 5px;
-        }
-      }
-    }
-    .discount-pictures-footer {
-      // position: absolute;
-      margin-top: 80px;
-      width: 40%;
-      height: 70%;
-    }
-    #copyright-policy-payment-footer{
-      .copyright-footer{
-        margin-left: 12.5%;
-        color: #a5a5a5;
-        font-size: 12px;
-      }
-      .terms-footer{
-        margin-left: -4%;
-        color: #a5a5a5;
-        a {
-          color: #a5a5a5;
-          text-decoration: none;
-          &:hover{
-            color: #a5a5a5;
-          }
-        }
-      }
-      .payment{
-        margin-left: -4%;
-      }
-    }
-  }
