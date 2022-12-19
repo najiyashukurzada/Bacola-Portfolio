@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Bacola</title>
 </head>
 <body> 
@@ -100,7 +100,7 @@
                         </button>
 
                         <div class="modal-dialog modal-sm">
-                        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="hide">
                             <div class="modal-content" style="width: 400px; margin: 100px;">
                                 <h2 style="margin-left: 30px; margin-right: 30px; margin-top: 20px; font-weight: 600;">Choose your Delivery Location
                                     <i class="fa-solid fa-xmark" style="margin-left: 100px; font-size: 20px;"></i>
@@ -154,17 +154,104 @@
         <div class="header-botton">
             <div class="contanier__botton">
                 <div class="all-cat">
-                    <a href="#">
-                        <i class="fa-solid fa-bars"></i>
-                        <span class="text">ALL CATEGORIES</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                        <div class="description">TOTAL 63 PRODUCTS</div>
-                    </a>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: white; border: none; box-shadow: none;">
+                         
+                          <a href="#">
+                              <i class="fa-solid fa-bars"></i>
+                              <span class="text">ALL CATEGORIES</span>
+                              <i class="fa-solid fa-chevron-down"></i>
+                              <div class="description">TOTAL 63 PRODUCTS</div>
+                          </a>
+                  
+                        </button>
+                        <div class="dropdown-menu" style="width: 280px;border-radius: 1px; margin-top: 255px;">
+                            <button class="dropdown-item" type="button" style="padding-top: 20px;"><i class="fa-solid fa-apple-whole"></i>Fruits & Vegetables <i class="fa-solid fa-chevron-right"></i></button>
+                            <button class="dropdown-item" type="button"><i class="fa-solid fa-fish"></i>Meats & Seafood</button>
+                            <button class="dropdown-item" type="button"><i class="fa-solid fa-egg"></i>Breakfast & Dairy</button>
+                            <button class="dropdown-item" type="button"><i class="fa-solid fa-mug-hot"></i>Beverages <i class="fa-solid fa-chevron-right"></i></button>
+                            <button class="dropdown-item" type="button"><i class="fa-solid fa-cookie"></i>Breads & Bakery/button>
+                            <button class="dropdown-item" type="button"><i class="fa-regular fa-snowflake"></i>Frozen Food</button>
+                            <button class="dropdown-item" type="button"><i class="fa-solid fa-candy-cane"></i>Biscuts & Snacks</button>
+                            <button class="dropdown-item" type="button" style="padding-bottom: 20px;"><i class="fa-solid fa-cart-shopping"></i>Grocery & Staples</button>
+                            <div style="border-top: 1px solid lightgray;"></div>
+                            <button class="link" style="padding-top: 15px;">Value of the Day</button>
+                            <button class="link">Top 100 offers</button>
+                            <button class="link">New Arrivals</button>
+                        </div>
+                      </div>
                 </div>
                 <nav class="site-menu">
                     <ul>
-                        <li>Home <i class="fa-solid fa-chevron-down"></i></li>
-                        <li>Shop <i class="fa-solid fa-chevron-down"></i></li>
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <li>Home <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></li>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#">Home 1</a>
+                              <a href="#">Home 2</a>
+                              <a href="#">Home 3</a>
+                              <a href="#">Home 4</a>
+                              <a href="#">Home 5</a>
+                            </div>
+                          </div>
+
+                        
+                        
+                        <li class="shop">Shop <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i>
+                            <ul class="sub-menu" style="padding-left: 89.5px; padding-right: 89.5px;">
+                                <li class="dropdown  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://klbtheme.com/bacola/shop/"><span class="text">Shop Lists</span></a>
+                                <ul class="sub-menu">
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://klbtheme.com/bacola/shop/"><span class="text">Shop Default</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?opt=right-sidebar"><span class="text">Shop Right Sidebar</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?column=5&amp;opt=wide"><span class="text">Shop Wide</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?shop_view=list_view"><span class="text">List Left Sidebar</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?ft=load-more"><span class="text">Load More Button</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?ft=infinite"><span class="text">Infinite Scrolling</span></a></li>
+                                </ul>
+                                </li>
+                                <li class="dropdown  menu-item menu-item-type-post_type menu-item-object-product menu-item-has-children"><a href="https://klbtheme.com/bacola/product/all-natural-italian-style-chicken-meatballs/"><span class="text">Product Detail</span></a>
+                                <ul class="sub-menu">
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-product"><a href="https://klbtheme.com/bacola/product/all-natural-italian-style-chicken-meatballs/"><span class="text">Product Default</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-product"><a href="https://klbtheme.com/bacola/product/tomatoes-on-the-vine/"><span class="text">Product Variable</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-product"><a href="https://klbtheme.com/bacola/product/foster-farms-takeout-crispy-classic-buffalo-wings/"><span class="text">Product Grouped</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-product"><a href="https://klbtheme.com/bacola/product/zevia-kidz-strawberry-lemonade-zero-calorie-soda/"><span class="text">Product External</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-product"><a href="https://klbtheme.com/bacola/product/vital-farms-pasture-raised-egg-bites-bacon-cheddar/"><span class="text">Product Downloadable</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-product"><a href="https://klbtheme.com/bacola/product/angies-boomchickapop-sweet-salty-kettle-corn/"><span class="text">Product With Video</span></a></li>
+                                </ul>
+                            </li>
+                                <li class="dropdown  menu-item menu-item-type-post_type menu-item-object-product menu-item-has-children"><a href="https://klbtheme.com/bacola/product/all-natural-italian-style-chicken-meatballs/"><span class="text">Product Types</span></a>
+                                <ul class="sub-menu">
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-product"><a href="https://klbtheme.com/bacola/product/all-natural-italian-style-chicken-meatballs/"><span class="text">Single Type 1</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/product/angies-boomchickapop-sweet-salty-kettle-corn/?opt=type2"><span class="text">Single Type 2</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/product/blue-diamond-almonds-lightly-salted/?opt=type3"><span class="text">Single Type 3</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/product/organic-white-corn-tortilla-chips/?opt=type4"><span class="text">Single Type 4</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/product/all-natural-italian-style-chicken-meatballs/?opt=vertical"><span class="text">Thumbnails Left</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/product/organic-white-corn-tortilla-chips/?ft=imgzoom"><span class="text">Zoom Image</span></a></li>
+                                </ul>
+                            </li>
+                                <li class="dropdown  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#"><span class="text">Shop Pages</span></a>
+                                <ul class="sub-menu">
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://klbtheme.com/bacola/cart/"><span class="text">Cart</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://klbtheme.com/bacola/checkout/"><span class="text">Checkout</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://klbtheme.com/bacola/my-account/"><span class="text">My account</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://klbtheme.com/bacola/wishlist/"><span class="text">Wishlist</span></a></li>
+                                    <li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://klbtheme.com/bacola/order-tracking/"><span class="text">Order Tracking</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/product/blue-diamond-almonds-lightly-salted/?ft=orderonwhatsapp"><span class="text">Order on WhatsApp</span></a></li>
+                                </ul>
+                            </li>
+                                <li class="dropdown  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#"><span class="text">Shop Layouts</span></a>
+                                <ul class="sub-menu">
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?column=2"><span class="text">Two Columns</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?column=3"><span class="text">Three Columns</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?column=3&amp;opt=wide"><span class="text">Three Columns Wide</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?column=4"><span class="text">Four Columns</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?column=4&amp;opt=wide"><span class="text">Four Columns Wide</span></a></li>
+                                    <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://klbtheme.com/bacola/shop/?column=5&amp;opt=wide"><span class="text">Five Columns wide</span></a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
                         <li><i class="fa-solid fa-fish"></i> Meats&Seafood</li>
                         <li><i class="fa-solid fa-bread-slice"></i> Bakery</li>
                         <li><i class="fa-solid fa-mug-hot"></i> Beverages</li>
@@ -176,7 +263,7 @@
         </div>
     </header>
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="border-radius: 10px;">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="./image/slider-image-1.jpg" alt="First slide">
@@ -189,6 +276,45 @@
           </div>
         </div>
     </div>
+
+    <div class="module-body">
+        <div class="banner-wrapper">
+            <div class="module-header">
+                <div class="column1">
+                    <h4 class="entry-title">Best Sellers</h4>
+                    <div class="entry-description">Do not miss the current offers until the end of March.</div>
+                </div>
+                <div class="column">
+                    <a class="button button-info-default xsmall rounded" href="https://klbtheme.com/bacola/shop/?orderby=popularity">View All 
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="banner-content">
+                <div class="content-header">
+                    <div class="sub-text">
+                        Bacola Natural Foods
+                    </div>
+                </div>
+                <div class="content-main">
+                    <h4 class="entry-subtitle">Special Organic</h4>
+                    <h3 class="entry-title color-text">Roats Burger</h3>
+                </div>
+                <div class="content-footer">
+                    <span class="price-text">only-from</span>
+                    <span class="price">$14.99</span>
+                </div>
+            </div>
+            <div class="banner-thumbnail">
+                <img decoding="async" src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/banner-box.jpg" alt="banner" style="border-radius: 10px;">
+            </div>
+            <a href="" class="overlay-link"></a>
+        </div>
+    </div>
+    
+    
+   
     <footer id="footer">
         <section id="section-subscription-footer" style="max-width: 100%; height: 355px; background-color: #233a95;">
             <div class="subsciption-footer mt-5" style="color: white;">
@@ -260,12 +386,131 @@
                     </div>
                 </div>
         </section>
+        <section>
+            <div class="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                            <div class="col col-12 col-lg-3 col-five" style="width: 240px;">
+                                <div class="widget_nav_menu">
+                                    <h4 class="widget-title">Breakfast &amp; Dairy</h4>
+                                    <div class="menu-breakfast-dairy-container">
+                                        <ul id="menu-breakfast-dairy" class="menu">
+                                            <li id="menu-item-1807" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1807"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/milk-flavoured-milk/">Milk &amp; Flavoured Milk</a></li>
+                                            <li id="menu-item-1802" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1802"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/butter-and-margarine/">Butter and Margarine</a></li>
+                                            <li id="menu-item-1803" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1803"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/cheese/">Cheese</a></li>
+                                            <li id="menu-item-1804" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1804"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/eggs-substitutes/">Eggs Substitutes</a></li>
+                                            <li id="menu-item-1805" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1805"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/honey/">Honey</a></li>
+                                            <li id="menu-item-1806" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1806"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/marmalades/">Marmalades</a></li>
+                                            <li id="menu-item-1808" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1808"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/sour-cream-and-dips/">Sour Cream and Dips</a></li>
+                                            <li id="menu-item-1809" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1809"><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/yogurt/">Yogurt</a></li>
+                                        </ul>
+                                    </div>
+                                </div>								
+                            </div>
+                            <div class="col col-12 col-lg-3 col-five" style="width: 240px;">
+                                <div class="widget_nav_menu">
+                                    <h4 class="widget-title">Meat &amp; Seafood</h4>
+                                    <div class="menu-meat-seafood-container">
+                                        <ul id="menu-meat-seafood" class="menu">
+                                            <li id="menu-item-1811" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/breakfast-sausage/">Breakfast Sausage</a></li>
+                                            <li id="menu-item-1814" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/dinner-sausage/">Dinner Sausage</a></li>
+                                            <li id="menu-item-1810" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/beef/">Beef</a></li>
+                                            <li id="menu-item-1812" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/chicken/">Chicken</a></li>
+                                            <li id="menu-item-1817" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/sliced-deli-meat/">Sliced Deli Meat</a></li>
+                                            <li id="menu-item-1816" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/shrimp/">Shrimp</a></li>
+                                            <li id="menu-item-1818" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/wild-caught-fillets/">Wild Caught Fillets</a></li>
+                                            <li id="menu-item-1813" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/crab-and-shellfish/">Crab and Shellfish</a></li>
+                                            <li id="menu-item-1815" ><a href="https://klbtheme.com/bacola/product-category/meats-seafood/farm-raised-fillets/">Farm Raised Fillets</a></li>
+                                        </ul>
+                                    </div>
+                                </div>								
+                            </div>
+                            <div class="col col-12 col-lg-3 col-five" style="width: 240px;">
+                                <div class="widget_nav_menu">
+                                    <h4 class="widget-title">Beverages</h4>
+                                    <div class="menu-beverages-container">
+                                        <ul id="menu-beverages" class="menu">
+                                            <li id="menu-item-1826" ><a href="https://klbtheme.com/bacola/product-category/beverages/water/">Water</a></li>
+                                            <li id="menu-item-1824" ><a href="https://klbtheme.com/bacola/product-category/beverages/sparkling-water/">Sparkling Water</a></li>
+                                            <li id="menu-item-1823" ><a href="https://klbtheme.com/bacola/product-category/beverages/soda-pop/">Soda &amp; Pop</a></li>
+                                            <li id="menu-item-1819" ><a href="https://klbtheme.com/bacola/product-category/beverages/coffee/">Coffee</a></li>
+                                            <li id="menu-item-1822" ><a href="https://klbtheme.com/bacola/product-category/beverages/milk-plant-based-milk/">Milk &amp; Plant-Based Milk</a></li>
+                                            <li id="menu-item-1825" ><a href="https://klbtheme.com/bacola/product-category/beverages/tea-kombucha/">Tea &amp; Kombucha</a></li>
+                                            <li id="menu-item-1821" ><a href="https://klbtheme.com/bacola/product-category/beverages/drink-boxes-pouches/">Drink Boxes &amp; Pouches</a></li>
+                                            <li id="menu-item-1820" ><a href="https://klbtheme.com/bacola/product-category/beverages/craft-beer/">Craft Beer</a></li>
+                                            <li id="menu-item-1827" ><a href="https://klbtheme.com/bacola/product-category/beverages/wine/">Wine</a></li>
+                                        </ul>
+                                    </div>
+                                </div>								
+                            </div>
+                            <div class="col col-12 col-lg-3 col-five" style="width: 240px;">
+                                <div class="widget_nav_menu">
+                                    <h4 class="widget-title">Breads &amp; Bakery</h4>
+                                    <div class="menu-breakfast-dairy-container">
+                                        <ul id="menu-breakfast-dairy-1" class="menu">
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/milk-flavoured-milk/">Milk &amp; Flavoured Milk</a></li>
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/butter-and-margarine/">Butter and Margarine</a></li>
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/cheese/">Cheese</a></li>
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/eggs-substitutes/">Eggs Substitutes</a></li>
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/honey/">Honey</a></li>
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/marmalades/">Marmalades</a></li>
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/sour-cream-and-dips/">Sour Cream and Dips</a></li>
+                                            <li><a href="https://klbtheme.com/bacola/product-category/breakfast-dairy/yogurt/">Yogurt</a></li>
+                                        </ul>
+                                    </div>
+                                </div>								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section>
+            <div class="footer-contacts">
+                <div class="container">
+                    <div class="column column-left">
+                        <div class="site-phone">
+                            <div class="phone-icon" >
+                                <i class="fa-solid fa-phone"></i></div>
+                            <div class="phone-detail">
+                                <h4 class="entry-title">8 800 555-55
 
+                                    <br/>
+                                    <span>Working 8:00 - 22:00</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" column-right">
+                        <div class="site-mobile-app">
+                            <div class="app-content">
+                                <h6 class="entry-title">Download App on Mobile :</h6>
+                                <span>15% discount on your first purchase</span>
+                            </div>
+                            <div class="app-buttons">
+                                <a href="https://play.google.com/store" class="google-play">
+                                    <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/google-play.png" alt="app">
+                                </a>
+                                <a href="https://www.apple.com/app-store/" class="google-play">
+                                    <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/app-store.png" alt="app">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="site-social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Copyright Policy Payment -->
-        <section id="copyright-policy-payment-footer" style="margin: 30px; border-top: 1px solid rgb(163, 161, 161);">
+        <section id="copyright-policy-payment-footer" style="margin: 30px;">
             <div class="container mt-3 copyright-footer">
                 <div class="row" style="display: flex; align-items: center;">
-                    <div class="col-lg-5" style="font-size: 12px; color: rgb(163, 161, 161) ;">
+                    <div class="col-lg-5" style="font-size: 11px; color: rgb(163, 161, 161) ;">
                         <p>Copyright 2022 © Bacola WordPress Theme. All rights reserved. Powered by KlbTheme.</p>
                     </div>
                     <div class="col-lg-3 terms-footer" style="font-size: 12px;">
